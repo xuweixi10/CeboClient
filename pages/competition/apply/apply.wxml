@@ -1,0 +1,2 @@
+<!--pages/competition/apply/apply.wxml-->
+<text>competitionId is {{competitionId}}</text>

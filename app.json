@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/competition/index/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "custom-tab-bar/index",
+    "pages/personal/index/index",
+    "pages/recruit/index/index",
+    "pages/competition/apply/apply",
+    "pages/competition/details/details"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/competition/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/recruit/index/index",
+        "text": "招募"
+      },
+      {
+        "pagePath": "pages/personal/index/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50,
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#54a0e7",
+    "backgroundColor": "#54a0e7",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

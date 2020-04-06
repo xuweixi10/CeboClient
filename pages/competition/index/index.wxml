@@ -1,0 +1,34 @@
+<!--pages/competition/index/index.wxml-->
+<view class="background">
+  <view class="container" style="height:{{backgroundHeight}}">
+    <view class="top">
+    <form bindsubmit="search">
+      <input name="keyword" placeholder="输入搜索的比赛信息"></input>
+      <button form-type="submit">搜索</button>
+    </form>
+    </view>
+    <view class="medium">
+      <view class="swipterImage">
+        <swiper indicator-dots="{{false}}" indicator-color="#ffffff" autoplay="true" circular="true" class='Swiper' 
+              bindchange='bindchange'>
+          <block wx:for="{{swiperImage}}" wx:key="index">
+            <swiper-item>
+              <image src='{{item}}'mode="aspectFill" style="width:100%;height:100%;" bindtap='swipclick'/>
+            </swiper-item> 
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class="bottom">
+      <view wx:for="{{competitionInfor}}" wx:key="competitionId">
+        <comInfor competitionId="{{item.competitionId}}" competitionName="{{item.competitionName}}" 
+        competitionApplyBeginTime="{{item.competitionApplyBeginTime}}"
+        competitionApplyEndTime="{{item.competitionApplyEndTime}}" 
+        competitionObject="{{item.competitionObject}}">
+        </comInfor>
+      </view>
+      <view class="loadInfor" hidden="{{!showLoading}}">加载中。。。</view>
+    </view>
+  </view>
+</view>
+<!---->

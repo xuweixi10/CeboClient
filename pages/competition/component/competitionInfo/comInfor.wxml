@@ -1,0 +1,11 @@
+<!--pages/competition/component/competitionInfo/comInfor.wxml-->
+<view class="competitionItem">
+  <view class="competitionInformation" bindtap="toDetails">
+    <view class="name">{{competitionName}}</view>
+    <view class="extra">
+      <view class="time">报名时间：{{competitionApplyBeginTime}}~{{competitionApplyEndTime}}</view>
+      <view class="object">面向对象：{{competitionObject}}</view>
+    </view>
+  </view>
+  <button class="apply" bindtap="toApply">报名</button>
+</view>

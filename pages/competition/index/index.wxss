@@ -1,0 +1,85 @@
+/* pages/competition/index/index.wxss */
+page{
+  background-color: rgba(84, 160, 237, 0.8);
+}
+.background{
+  width: 100%;
+  height: auto;
+
+}
+.container{
+  position: relative;
+  width: 90%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(239, 228, 237, 0.5);
+  height: auto;
+  opacity: 0.8;
+ 
+}
+.top{
+  position: relative;
+  top: 20rpx;
+  width: 100%;
+}
+.top form{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.top input{
+  position: relative;
+  float: left;
+  left: 50rpx;
+  height: 70rpx;
+  width: 400rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  background-color: #dbdcdc;
+}
+.top form button{
+  border: none;
+  float: left;
+  left: 80rpx;
+  background-color: #dbdcdc;
+  position: relative;
+  width: 20%;
+  height: 70rpx;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  padding: 0;
+  font-weight: 500;
+}
+.medium{
+  position: relative;
+  top: 10rpx;
+}
+.medium .swipterImage{
+  position: relative;
+  top: 50rpx;
+  overflow: hidden;
+  width: 600rpx;
+  height: 330rpx;
+  align-items: center;
+  border-radius: 24rpx;
+  z-index: 10;
+}
+.medium swiper{
+  width: 600rpx;
+  height: 330rpx;
+  border-radius: 24rpx;
+  z-index: 10;
+}
+.bottom{
+  top: 100rpx;
+  position: relative;
+  width: 90%;
+}
+.loadInfor{
+  position: relative;
+  text-align: center;
+  line-height: 100rpx;
+  height: 100rpx;
+}
