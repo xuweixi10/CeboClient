@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "menu":"/pages/competition/component/menu/menu",
+    "paragraphChild":"/pages/competition/component/paragraphChild/paragraphChild"
+  }
 }

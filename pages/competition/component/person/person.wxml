@@ -1,0 +1,33 @@
+<!--pages/competition/component/person/person.wxml-->
+<view class="person" animation="{{hiddenInfor}}" style="height:{{personHeight}}px">
+  <view class="hiddenInfor">
+    <view class="details1">{{detail1Value}}</view>
+    <view class="details2">{{detail2Value}}</view>
+    <view class="change" bindtap="hiddenInfor">{{change}}</view>
+  </view>
+  <view class="delete" bindtap="delete">×</view>
+  <form class="personForm">
+    <view wx:for="{{formData}}" wx:key="inputName">
+      <view class="item">
+        <text class="name">{{item.name}}</text>
+        <input class="input" data-name="{{item.inputName}}" type="text" maxlength="{{item.maxLength}}" bindinput="ValueChange"></input>
+      </view>
+    </view>
+    <!-- <view class="item">
+      <text class="name">姓名</text>
+      <input class="input" data-name="f1" type="text" bindinput="detail1ValueChange"></input>
+    </view>
+    <view class="item">
+      <text class="name">学号</text>
+      <input class="input" data-name="f2" type="text" bindinput="detail2ValueChange"></input>
+    </view>
+    <view class="item">
+      <text class="name">学院</text>
+      <input class="input" data-name="f3" type="text" bindinput="inputChange"></input>
+    </view>
+    <view class="item">
+      <text class="name">专业班级</text>
+      <input class="input" data-name="f4" type="text" bindinput="inputChange"></input>
+    </view> -->
+  </form>
+</view>

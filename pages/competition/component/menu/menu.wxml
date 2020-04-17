@@ -1,0 +1,9 @@
+<!--pages/competition/component/menu/menu.wxml-->
+<view class="item">
+  <view class="title" bindtap="ChangeStatus">{{menuTitle}}</view>
+    <view class="content" wx:if="{{status}}">
+      <view wx:for="{{menuItems}}" wx:key="name">
+      <view class="child-title" bindtap="ToContent" data-contentid="{{item.url}}">{{item.name}}</view>
+      </view>
+    </view>
+</view>

@@ -1,1 +1,220 @@
 /* pages/competition/apply/apply.wxss */
+page{
+  position: absolute;
+  height: 100%;
+}
+.form-contain{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.fixedTop{
+  position: fixed;
+  width: 100%;
+  height: 260rpx;
+  background-color: #FFF;
+  z-index: 10;
+}
+.top{
+  position: relative;
+  top: 60rpx;
+  height: 120rpx;
+  left: 15%;
+  width: 70%;
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #000;
+}
+.top .item{
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 120rpx;
+}
+.top .color{
+  border-radius: 5rpx;
+  position: absolute;
+  background-color: antiquewhite;
+  height: 80%;
+  width: 50%;
+  z-index: -1;
+}
+.bottomArea{
+  position: relative;
+  width: 200%;
+  top: 230rpx;
+}
+.bottomArea .team{
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.team .captainInfor{
+  position: relative;
+  width: 96%;
+  left: 2%;
+  padding-top: 10rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #000;
+}
+.captainInfor .title{
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 42rpx;
+  left: 5%;
+  font-weight: 600;
+}
+.captainInfor .captainForm{
+  position: relative;
+  width: 96%;
+  left: 2%;
+}
+.captainForm .item{
+  position: relative;
+  width: 600rpx;
+  height: 80rpx;
+  left: 40rpx;
+  margin-bottom: 40rpx;
+}
+.item .name{
+  position: relative;
+  line-height: 80rpx;
+  float: left;
+  width: 160rpx;
+  left: 0rpx;
+  text-align: center;
+  margin-right: 40rpx;
+  border-bottom: 1px solid #000;
+}
+.item .input{
+  position: relative;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  float: left;
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 380rpx;
+}
+.team .personinfor{
+  position: relative;
+  width: 94%;
+  left: 3%;
+  padding-top: 10rpx;
+  padding-bottom: 40rpx;
+}
+.personinfor .toparea{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+}
+.toparea .name{
+  position: relative;
+  float: left;
+  font-size: 42rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+}
+.toparea .recruit{
+  padding: 0rpx;
+  position: relative;
+  float: right;
+  width: 300rpx;
+  height: 100rpx;
+  font-weight: 300;
+  font-size: 24rpx;
+  margin-left: 40rpx;
+  line-height: 100rpx;
+  color: #39f;
+  background-color: #fff;
+}
+.toparea .addInfor{
+  padding: 0;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  float: right;
+}
+.person{
+  position: relative;
+  width: 94%;
+  left: 3%;
+  overflow:hidden;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #000;
+}
+.person .personForm{
+  position: relative;
+  width: 96%;
+  left: 2%;
+  height: 100%;
+}
+.personForm .item{
+  position: relative;
+  width: 600rpx;
+  height: 80rpx;
+  margin-bottom: 40rpx;
+}
+.bottomArea .competition{
+  position: absolute;
+  float: left;
+  top: 40rpx;
+  width: 46%;
+  height: 100rpx;
+  left: 52%;
+  text-align: center;
+}
+.competitionitem{
+  position: relative;
+  width: 80%;
+  left: 10%;
+}
+.competitionitem .competitionName{
+  position: relative;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+  height: 100rpx;
+  border-bottom: 1px solid #000;
+}
+.competitionitem input{
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: rosybrown;
+}
+.competitionitem .picker{
+  position: relative;
+  background-color: antiquewhite;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.competitionitem .radio{
+  position: relative;
+  margin-left: 10rpx;
+}
+.competitionitem .textarea{
+  position: relative;
+  text-align: left;
+  padding-left: 10rpx;
+  height: 500rpx;
+  background-color: antiquewhite;
+  width: 120%;
+  right: 10%;
+
+}
+.competition .submit{
+  position: relative;
+  top: 100rpx;
+}
+.competition .problem{
+  position: relative;
+  top:160rpx;
+  font-size: 28rpx;
+  color: #39f;
+  padding-bottom: 60rpx;
+}

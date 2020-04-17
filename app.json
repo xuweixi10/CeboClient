@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/competition/apply/apply",
     "pages/competition/index/index",
     "pages/index/index",
     "pages/logs/logs",
     "custom-tab-bar/index",
     "pages/personal/index/index",
     "pages/recruit/index/index",
-    "pages/competition/apply/apply",
     "pages/competition/details/details"
   ],
   "tabBar": {
@@ -17,14 +17,20 @@
     "list": [
       {
         "pagePath": "pages/competition/index/index",
-        "text": "首页"
+        "iconPath": "/image/icon/comp.png",
+        "selectedIconPath": "/image/icon/comped.png",
+        "text": "比赛"
       },
       {
         "pagePath": "pages/recruit/index/index",
+        "iconPath": "/image/icon/recruited.png",
+        "selectedIconPath": "/image/icon/recruit.png",
         "text": "招募"
       },
       {
         "pagePath": "pages/personal/index/index",
+        "iconPath": "/image/icon/per.png",
+        "selectedIconPath": "/image/icon/pered.png",
         "text": "我的"
       }
     ]
@@ -35,7 +41,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#54a0e7",
     "backgroundColor": "#54a0e7",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "赛宝",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

@@ -1,0 +1,98 @@
+/* pages/competition/component/person/person.wxss */
+.person{
+  position: relative;
+  width: 100%;
+  overflow:hidden;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #000;
+}
+.person .hiddenInfor{
+  position: relative;
+  width: 86%;
+  left: 4%;
+  height: 100rpx;
+  background-color: #dbdbdb;
+  margin-bottom: 40rpx;
+  border-radius: 8rpx;
+}
+.hiddenInfor .index{
+  position: relative;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-right: 1px solid #000;
+}
+.hiddenInfor .details1{
+  position: relative;
+  float: left;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  width: 160rpx;
+  border-right: 1px solid #000;
+}
+.hiddenInfor .details2{
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 340rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-right: 1px solid #000;
+}
+.hiddenInfor .change{
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.person .delete{
+  position: absolute;
+  width: 10%;
+  left: 90%;
+  top: 20rpx;
+  height: 100rpx;
+  color: red;
+  text-align: center;
+  font-weight: 600;
+  font-size: 48rpx;
+  line-height: 100rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+.person .personForm{
+  position: relative;
+  width: 96%;
+  left: 2%;
+  height: 100%;
+}
+.personForm .item{
+  position: relative;
+  width: 600rpx;
+  height: 80rpx;
+  left: 30rpx;
+  margin-bottom: 40rpx;
+}
+.item .input{
+  position: relative;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  float: left;
+  background-color: #f8f8f8;
+  height: 100%;
+  left: 20rpx;
+  width: 360rpx;
+}
+.item .name{
+  position: relative;
+  line-height: 80rpx;
+  float: left;
+  width: 160rpx;
+  left: 0rpx;
+  text-align: center;
+  margin-right: 40rpx;
+  border-bottom: 1px solid #000;
+}

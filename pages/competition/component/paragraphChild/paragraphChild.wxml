@@ -1,0 +1,5 @@
+<!--pages/competition/component/paragraphChild/paragraphChild.wxml-->
+<view class="paragraphChild">
+    <view class="paragraphChildTitle" id="{{contentUrl}}">{{title}}</view>
+    <text>{{content}}</text>
+</view>

@@ -1,0 +1,27 @@
+/* pages/competition/component/menu/menu.wxss */
+.item{
+  border-bottom: 1px solid rgba(48, 40, 40, 0.801);
+  background-color: antiquewhite;
+  
+}
+.item .title{
+  text-align: left;
+  padding-left: 40rpx;
+  height: 120rpx;
+  font-size: 36rpx;
+  line-height: 120rpx;
+  background-color: silver;
+}
+.item .content{
+  position: relative;
+  left: 10%;
+  width: 90%;
+  overflow: hidden;
+}
+.content .child-title{
+  font-size: 32rpx;
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  border-top: 1px solid rgba(48, 40, 40, 0.801);
+}

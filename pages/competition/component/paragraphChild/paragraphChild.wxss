@@ -1,0 +1,17 @@
+/* pages/competition/component/paragraphChild/paragraphChild.wxss */
+.paragraphChild{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-size: 32rpx;
+  position: relative;
+  width: 96%;
+}
+.paragraphChild .paragraphChildTitle{
+  position: relative;
+  left: -5rpx;
+  font-size: 36rpx;
+  height: 120rpx;
+  line-height:120rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #000;
+}
