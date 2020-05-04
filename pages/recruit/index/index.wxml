@@ -1,2 +1,32 @@
 <!--pages/recruit/index/index.wxml-->
-<text>pages/recruit/index/index.wxml</text>
+<view class="main">
+  <view class="addRecuit" bindtap="toAdd">
+  +
+  </view>
+  <view class="hotCompetition">
+    <view class="title">
+      <view class="name">热门比赛</view>
+      <image src="/image/icon/hot.png"></image>
+    </view>
+    <view class="competitions">
+      <view wx:for="{{hotCompetition}}" wx:key="competitionId">
+        <view class="item" data-name="{{item.competitionName}}" bindtap="toType">
+          <text class="name">{{item.competitionName}}</text>
+          <image src="/image/icon/arrow.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="recruits">
+    <view class="title">
+      <view class="name">所有招募</view>
+    </view>
+    <view wx:for="{{recruitData}}" wx:key="id">
+      <view class="recruit" bindtap="todetails" data-id="{{item.id}}">
+        <view class="competitionName">{{item.compName}}</view>
+        <view class="wanted">{{item.wantedPerson}}</view>
+      </view>
+    </view>
+    <view class="bottom">我是有底线的</view>
+  </view>
+</view>

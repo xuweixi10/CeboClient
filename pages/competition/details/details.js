@@ -101,9 +101,11 @@ Page({
     })
   },
   toContent:function(data){
+    console.log(data)
     wx.pageScrollTo({
-      selector:"#"+data.detail,
+      selector:"#m"+data.detail,
       success: (res) => {
+        console.log(res)
         this.moveleft()
       },
       fail:(res)=>{
@@ -115,10 +117,72 @@ Page({
    * 前往报名页面
    */
   toApply:function(event){
+    let flag=0
     let id=event.currentTarget.dataset.comid
-    wx.navigateTo({
-      url: '/pages/competition/apply/apply?competitionId='+id,
+    console.log(global.openId)
+    if(global.status==0){
+      wx.getStorage({
+      key: 'joinCompetition',
+      success:(res)=>{
+        let comdata=res.data;
+        for(let i=0;i<comdata.length;i++){
+          if(comdata[i].competitionId==id){
+            flag=1;
+          }
+        }
+        if(flag==0){
+          wx.navigateTo({
+            url: '/pages/competition/apply/apply?competitionId='+id,
+          })
+        }else if(flag==1){
+          wx.showToast({
+            title: '你已参加该比赛',
+            icon:'none'
+          })
+        }
+      },
+      fail:(res)=>{
+        wx.request({
+          url: 'https://www.xzyhyfw.com:7443/Apply/getAllApplyCompetition?openId='+global.openId,
+          success:(res)=>{
+            let comdata=res.data.data;
+            wx.setStorage({
+              data: comdata,
+              key: 'joinCompetition',
+            })
+            for(let i=0;i<comdata.length;i++){
+              if(comdata[i].competitionId==id){
+                flag=1;
+              }
+            }
+            if(flag==0){
+              wx.navigateTo({
+                url: '/pages/competition/apply/apply?competitionId='+id,
+              })
+            }else if(flag==1){
+              wx.showToast({
+                title: '你已参加该比赛',
+                icon:'none'
+              })
+            }else{
+              wx.showToast({
+                title: '服务器错误',
+                icon:'none'
+              })
+            }
+          },
+          fail:(res)=>{
+            flag=2
+          }
+        })
+      }
     })
+    }else{
+      wx.showToast({
+        title: '请先登录或完善个人信息',
+        icon:'none'
+        })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -129,6 +193,32 @@ Page({
     })
     this.setData({
       competitionId:options.competitionId,
+    })
+    wx.request({
+      url: 'https://www.xzyhyfw.com:7443/api/competition/v1/detail?compId='+options.competitionId,
+      success:(res)=>{
+        console.log(res.data)
+        let data=res.data.data
+        if(res.data.code==0){
+          wx.hideLoading({
+            complete: (res) => {
+              if(data.competitionDetail.length==0){
+                wx.navigateBack({
+                  complete: (res) => {
+                    wx.showToast({
+                      title: '数据错误',
+                      icon:'none'
+                    })
+                  },
+                })
+              }
+            },
+          })
+          this.setData({
+            menu:res.data.data
+          })
+        }       
+      }
     })
     console.log(options.competitionId)
   },

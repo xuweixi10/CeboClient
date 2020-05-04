@@ -1,0 +1,35 @@
+/* pages/personal/information/information.wxss */
+.item{
+  position: relative;
+  top: 100rpx;
+  width: 80%;
+  left: 10%;
+  height: 200rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.name{
+  position: relative;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.formarea{
+  background-color: #bebebe;
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 8rpx;
+}
+.formarea input{
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.changeInfor{
+  position: relative;
+  top: 100rpx;
+}
+.certs{
+  display: none;
+}

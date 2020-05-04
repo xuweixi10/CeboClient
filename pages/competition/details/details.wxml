@@ -1,21 +1,21 @@
 <!--pages/competition/details/details.wxml-->
 <view class="left" animation="{{showLeftAnimation}}">
   <view class="menus">
-    <view wx:for="{{menu.competitionMeun}}" wx:key="bigMeun">
-    <menu menuItems="{{item.childMeun}}" menuTitle="{{item.bigMeun}}" bind:toContent="toContent"></menu>
+    <view wx:for="{{menu.competitionDetail}}" wx:key="bigMeun">
+    <menu menuItems="{{item.contents}}" menuTitle="{{item.detailTitle}}" bind:toContent="toContent"></menu>
     </view>
   </view>
-  <button class="toApplycontent" bindtap="toApply" data-comid="{{menu.comprtitionId}}">报名</button>
+  <button class="toApplycontent" bindtap="toApply" data-comid="{{menu.id}}">报名</button>
 </view>
 <view bindtap="moveright" class="showleft">目录</view>
 <view class="content" bindtap="moveleft" style="filter: blur({{filter}}rpx)" animation="{{right}}">
-<view class="title" id="title">2020 微信小程序大赛</view>
-  <view wx:for="{{menu.competitionMeun}}" wx:key="bigMeun" class="paragraph">
-    <view class="paragraph_title">大赛总体规程</view>
-    <view wx:for="{{item.childMeun}}" id="{{item.url}}" wx:key="name">
-      <paragraphChild title="{{item.name}}" contentUrl="{{item.url}}"></paragraphChild>
+<view class="title" id="title">{{menu.compName}}</view>
+  <view wx:for="{{menu.competitionDetail}}" wx:key="bigMeun" class="paragraph">
+    <view class="paragraph_title">{{item.detailTitle}}</view>
+    <view wx:for="{{item.contents}}" id="m{{item.id}}" wx:key="name">
+      <paragraphChild title="{{item.contentName}}" contentUrl="{{item.contentURL}}" id="{{item.id}}"></paragraphChild>
     </view>
   </view>
   <view class="space"></view>
-  <view class="apply"><button bindtap="toApply" data-comid="{{menu.comprtitionId}}">报名</button></view>
+  <view class="apply"><button bindtap="toApply" data-comid="{{menu.id}}">报名</button></view>
 </view>

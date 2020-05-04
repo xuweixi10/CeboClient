@@ -1,0 +1,58 @@
+/* pages/recruit/create/create.wxss */
+/* pages/recruit/details/recruits.wxss */
+.main{
+  position: relative;
+  width: 96%;
+  left: 2%;
+}
+.title{
+  position: relative;
+  width: 100%;
+  height:100rpx;
+  top: 40rpx;
+  font-weight: 700;
+  font-size: 48rpx;
+}
+.competitionName{
+  position: relative;
+  top: 40rpx;
+  left: 40rpx;
+  margin-bottom: 80rpx;
+}
+.name{
+  position: relative;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+.value{
+  position: relative;
+  width: 85%;
+  padding: 10rpx;
+  background-color: rgba(190, 190, 190, 0.4);
+  border-radius: 8rpx;
+}
+.competitionName .value{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.wanted{
+  position: relative;
+  left: 40rpx;
+  margin-bottom: 30rpx;
+}
+.wanted .value{
+  height: 160rpx;
+  line-height: 50rpx;
+}
+.intro{
+  position: relative;
+  left: 40rpx;
+}
+.intro .value{
+  position: relative;
+  height: 360rpx;
+}
+.submit{
+  position: relative;
+  top: 20rpx;
+}

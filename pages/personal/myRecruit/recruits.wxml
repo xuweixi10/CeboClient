@@ -1,0 +1,16 @@
+<!--pages/personal/myRecruit/recruits.wxml-->
+<view class="main">
+  <view class="recruits">
+    <view class="title">
+      <view class="name">我的招募</view>
+      <view class="recruitNum">{{recruitNum}}/10</view>
+    </view>
+    <view wx:for="{{recruitData}}" wx:key="id">
+      <view class="recruit" bindtap="todetails" data-id="{{item.id}}">
+        <view class="competitionName">{{item.compName}}</view>
+        <view class="wanted">{{item.wantedPerson}}</view>
+      </view>
+      <view class="delete" bindtap="deleteRecruit" data-id="{{item.id}}">×</view>
+    </view>
+  </view>
+</view>

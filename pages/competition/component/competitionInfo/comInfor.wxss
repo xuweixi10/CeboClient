@@ -19,12 +19,14 @@
   position: relative;
   float: left;
   width: 100%;
+  top: 5rpx;
   padding-left: 18rpx;
   font-weight: 500;
 }
 .competitionInformation .extra{
   position: relative;
   float: left;
+  top: 5rpx;
   left: 40rpx;
   height: 40rpx;
   font-size: 24rpx;

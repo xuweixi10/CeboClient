@@ -21,59 +21,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    backgroundHeight:"100%",
-    swiperImage: ["../image/swiper1.png", "../image/swiper1.png", "../image/swiper1.png"],
+    backgroundHeight:"",
+    swiperData:[],
+    competitionPage:1,
     showLoading:false,
-    competitionInfor:[
-      {
-        competitionId:"1",
-        competitionName:"2020微信小程序大赛",
-        competitionApplyBeginTime:"03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject:"全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      }
-    ],
+    competitionInfor:[],
   },
 
+  swipclick:function(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '../details/details?competitionId='+e.currentTarget.dataset.comid,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: 'https://www.xzyhyfw.com:7443/api/competition/v1/basic?page=1',
+      success:(res)=>{
+        console.log(res)
+        this.setData({
+          competitionInfor:res.data.data,
+        })
+      },
+      fail:(e)=>{
+        wx.showToast({
+          title: '数据错误',
+          icon:'none'
+        })
+      }
+    })
   },
 
   /**
@@ -93,7 +72,7 @@ Page({
     let ktxScreentHeight = systemInfo.screenHeight * pxToRpxScale
     console.log(ktxScreentHeight,ktxWindowHeight);
     this.setData({
-      backgroundHeight: ktxScreentHeight-10+"rpx",
+      backgroundHeight: ktxScreentHeight+10+"rpx",
     })
     // 底部tabBar的高度
     let tabBarHeight = ktxScreentHeight - ktxStatusHeight - navigationHeight - ktxWindowHeight
@@ -103,7 +82,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("1");
+    wx.request({
+      url: 'https://www.xzyhyfw.com:7443/api/competition/v1/index/swiperImage',
+      success:(res)=>{
+        console.log(res)
+        this.setData({
+          swiperData:res.data.data
+        })
+      },
+      fail:()=>{
+
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面隐藏
@@ -124,124 +114,76 @@ Page({
    */
   onPullDownRefresh: function () {
     wx.startPullDownRefresh();
-    let data=[
-      {
-        competitionId: "1",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
+    wx.request({
+      url: 'https://www.xzyhyfw.com:7443/api/competition/v1/basic?page=1',
+      success:(res)=>{
+        console.log(res.data)
+        this.setData({
+          competitionPage:1,
+          competitionInfor:res.data.data,
+        })
+        wx.stopPullDownRefresh({
+          complete: (res) => {
+            wx.showToast({
+              title: '刷新成功',
+            })
+            console.log(res)
+          },
+        })
       },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
+      fail:(e)=>{
+        wx.stopPullDownRefresh({
+          complete: (res) => {
+          },
+        })
+        wx.showToast({
+          title: '数据错误',
+          icon:'none'
+        })
       }
-    ];
-    this.setData({
-      competitionInfor:data,
     })
-    setTimeout(()=>{
-      wx.stopPullDownRefresh({
-        complete: (res) => {
-        },
-      })
-    },2000);
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    let data=[
-      {
-        competitionId: "1",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      },
-      {
-        competitionId: "2",
-        competitionName: "2020微信小程序大赛",
-        competitionApplyBeginTime: "03.20",
-        competitionApplyEndTime: "05.20",
-        competitionObject: "全体大学生"
-      }
-    ];
     this.setData({
       showLoading:true,
     })
-    var currentData = this.data.competitionInfor;
-    setTimeout(()=>{
-      for (var i = 0; i < data.length; i++) {
-        currentData.push(data[i]);
+    let data=[]
+    let page=this.data.competitionPage+1
+    wx.request({
+      url: 'https://www.xzyhyfw.com:7443/api/competition/v1/basic?page='+page,
+      success:(res)=>{
+        data=res.data.data;
+        if(data.length>0){
+          var currentData = this.data.competitionInfor;
+          for (var i = 0; i < data.length; i++) {
+            currentData.push(data[i]);
+          }
+          this.setData({
+            competitionPage:page,
+            competitionInfor: currentData,
+            showLoading:false,
+            backgroundHeight:this.data.backgroundHeight+184+"rpx",
+          })
+        }
+        else{
+          this.setData({
+            showLoading:false,
+          })
+          wx.showToast({
+            title: '没有更多数据了',
+            icon:'none',
+          })
+        }
+      },
+      fail:(e)=>{
+        console.log(e)
       }
-      this.setData({
-        competitionInfor: currentData,
-        showLoading:false,
-        backgroundHeight:this.data.backgroundHeight+374,
-      })
-    },3000);
-    console.log("1");
+    })
+    console.log(this.data.competitionPage)
   },
 
   /**

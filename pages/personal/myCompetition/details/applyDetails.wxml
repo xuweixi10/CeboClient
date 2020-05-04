@@ -1,0 +1,38 @@
+<!--pages/personal/myCompetition/details/applyDetails.wxml-->
+<view class="main">
+  <view class="team">
+    <view class="title">队伍信息</view>
+    <view class="details">
+      <view wx:for="{{comNameValue}}" wx:key="inputName">
+        <view class="competitionitem">
+            <text class="competitionName">{{item.name}}</text>
+            <view class="competitionNameNormal" type="text">{{item.value}}</view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class="cap">
+    <view class="title">队长信息</view>
+    <view class="details">
+      <view wx:for="{{capNameValue}}" wx:key="name">
+        <view class="item">
+          <text class="name">{{item.name}}</text>
+          <input class="input" value="{{item.value}}" type="text" maxlength="20"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="per">
+    <view class="title">队员信息</view>
+    <view class="details">
+      <view wx:for="{{perNameValue}}" wx:key="name"  class="persion">
+        <view wx:for="{{item}}" wx:key="name">
+          <view class="item">
+            <text class="name">{{item.name}}</text>
+            <input class="input" value="{{item.value}}" type="text" maxlength="20"></input>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

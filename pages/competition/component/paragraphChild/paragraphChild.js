@@ -11,6 +11,10 @@ Component({
     "contentUrl":{
       type:String,
       value:null
+    },
+    "id":{
+      type:String,
+      value:""
     }
   },
 
@@ -22,7 +26,7 @@ Component({
   },
   attached:function(){
     wx.request({
-      url: 'https://xzyhyfw.com/Text2.txt',
+      url: this.properties.contentUrl,
       success:res=>{
         this.setData({
           content:res.data

@@ -1,1 +1,118 @@
 /* pages/recruit/index/index.wxss */
+page{
+  background-color: rgba(218, 219, 219, 0.5);
+}
+.hotCompetition{
+  position: relative;
+  top: 20rpx;
+  width: 96%;
+  left: 2%;
+}
+.title{
+  position: relative;
+  padding-left: 20rpx;
+  height: 60rpx;
+  margin-bottom: 40rpx;
+  border-bottom: 1px solid #000;
+}
+.title .name{
+  position: relative;
+  float: left;
+  line-height: 50rpx;
+}
+.title image{
+  position: relative;
+  float: left;
+  height: 60rpx;
+  width: 60rpx;
+}
+.hotCompetition .title{
+  color: red;
+}
+.competitions{
+  position: relative;
+  width: 90%;
+  left: 5%;
+}
+.competitions .item{
+  position: relative;
+  height: 140rpx;
+  background-color:rgba(63, 165, 248, 0.4);
+  border-radius: 8rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  line-height: 140rpx;
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.item image{
+  position: relative;
+  float: right;
+  right: 20rpx;
+  top: 20rpx;
+  height: 100rpx;
+  width: 80rpx;
+}
+.recruits{
+  position: relative;
+  top: 80rpx;
+  width: 96%;
+  left: 2%;
+}
+.recruits .recruit{
+  position: relative;
+  height: 120rpx;
+  width: 90%;
+  left: 5%;
+  background-color: rgba(218, 219, 219, 0.8) ;
+  margin-bottom: 10rpx;
+  border-radius: 6rpx;
+  box-shadow: 5rpx 5rpx 10rpx rgba(0, 0, 0, 0.5);
+}
+.recruit:active{
+  box-shadow: 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.5);
+}
+.recruit .competitionName{
+  position: relative;
+  height: 80rpx;
+  font-size: 38rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+}
+.recruit .wanted{
+  position: relative;
+  height: 40rpx;
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  line-height: 40rpx;
+  padding-left: 30rpx;
+}
+.addRecuit{
+  position: fixed;
+  bottom: 100rpx;
+  right: 10rpx;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  z-index: 10;
+  background-color: rosybrown;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 48rpx;
+  font-weight: 600;
+}
+.bottom{
+  position: relative;
+  height: 100rpx;
+  text-align: center;
+  width: 100%;
+  font-size: 20rpx;
+  opacity: 0.7;
+  line-height: 100rpx;
+}

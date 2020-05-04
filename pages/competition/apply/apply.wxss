@@ -42,6 +42,7 @@ page{
 .bottomArea{
   position: relative;
   width: 200%;
+  height: auto;
   top: 230rpx;
 }
 .bottomArea .team{
@@ -93,6 +94,7 @@ page{
   border-radius: 10rpx;
   padding-left: 20rpx;
   float: left;
+  line-height: 80rpx;
   background-color: #f8f8f8;
   height: 100%;
   width: 380rpx;
@@ -185,11 +187,12 @@ page{
   position: relative;
   height: 100rpx;
   line-height: 100rpx;
-  background-color: rosybrown;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
 }
 .competitionitem .picker{
   position: relative;
-  background-color: antiquewhite;
+  background-color: #f8f8f8;
   line-height: 100rpx;
   height: 100rpx;
 }
@@ -201,8 +204,10 @@ page{
   position: relative;
   text-align: left;
   padding-left: 10rpx;
+  padding-top: 10rpx;
   height: 500rpx;
-  background-color: antiquewhite;
+  background-color: #f8f8f8;
+  border-radius: 16rpx;
   width: 120%;
   right: 10%;
 
