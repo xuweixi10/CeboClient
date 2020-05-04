@@ -1,0 +1,12 @@
+<!--pages/personal/component/competitionBasic/competitionBasic.wxml-->
+<view class="competition" bindtap="toDetails">
+  <view class="name">{{name}}</view>
+  <view class="detalis">
+    <view class="applyName">{{comNameValue[0].name}}</view>
+    <view class="value">{{comNameValue[0].value}}</view>
+  </view>
+  <view class="detalis">
+    <view class="applyName">{{comNameValue[1].name}}</view>
+    <view class="value">{{comNameValue[1].value}}</view>
+  </view>
+</view>

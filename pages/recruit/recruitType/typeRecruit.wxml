@@ -1,0 +1,12 @@
+<!--pages/recruit/recruitType/typeRecruit.wxml-->
+<view>
+  <view class="recruits">
+    <view wx:for="{{recruitData}}">
+      <view class="recruit" data-id="{{item.id}}" bindtap="toDetail">
+        <view class="competitionName">{{item.compName}}</view>
+        <view class="wanted">{{item.wantedPerson}}</view>
+      </view>
+    </view>
+    <view class="bottom">{{tips}}</view>
+  </view>
+</view>

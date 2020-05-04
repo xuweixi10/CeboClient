@@ -1,0 +1,7 @@
+<!--pages/personal/myCompetition/competition.wxml-->
+<view class="main">
+  <view class="title">我的比赛</view>
+  <view wx:for="{{competitionData}}" wx:key="teamId">
+    <competitionBasic teamid="{{item.teamId}}" competitionId="{{item.competitionId}}"/>
+  </view>
+</view>

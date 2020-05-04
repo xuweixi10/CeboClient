@@ -1,0 +1,18 @@
+<!--pages/recruit/details/recruits.wxml-->
+<view class="main">
+  <view class="title">
+  招募详情
+  </view>
+  <view class="competitionName">
+    <view class="name">比赛名称</view>
+    <view class="value">{{details.compName}}</view>
+  </view>
+  <view class="wanted">
+    <view class="name">需要的队友</view>
+    <view class="value">{{details.wantedPerson}}</view>
+  </view>
+  <view class="intro">
+    <view class="name">介绍</view>
+    <view class="value">{{details.introduction}}</view>
+  </view>
+</view>

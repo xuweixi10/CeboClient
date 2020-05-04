@@ -1,0 +1,29 @@
+.contain{
+  position: relative;
+  top: 100rpx;
+}
+.always{
+  position: relative;
+  font-size: 50rpx;
+  left: 10rpx;
+  top: -50rpx;
+  font-weight: 800;
+}
+.problem{
+  position: relative;
+  width: 80%;
+  left: 10%;
+  margin-bottom: 20rpx;
+}
+.problem .title{
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.problem .answer{
+  position: relative;
+  margin-top: 20rpx;
+  left: 20rpx;
+}

@@ -5,11 +5,41 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+  
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: 'https://www.xzyhyfw.com:7443/account/openId?code='+res.code,
+          success:(res)=>{
+            console.log(res)
+            global.openId=res.data.data
+            wx.getStorage({
+              key: 'accountData',
+              success (data) {
+                if(data!=null){
+                  console.log(1)
+                  global.status=0
+                }
+                else{
+                  global.status=2;
+                }
+              },
+              fail:(res)=>{
+                console.log(res)
+                global.status=2;
+              }
+            })
+          },
+          fail:(res)=>{
+            console.log(res)
+            wx.showToast({
+              title: '请求失败',
+              icon:'none'
+            })
+          },
+        })
       }
     })
     // 获取用户信息

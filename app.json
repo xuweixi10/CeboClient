@@ -1,13 +1,19 @@
 {
   "pages": [
-    "pages/competition/apply/apply",
     "pages/competition/index/index",
-    "pages/index/index",
-    "pages/logs/logs",
-    "custom-tab-bar/index",
-    "pages/personal/index/index",
     "pages/recruit/index/index",
-    "pages/competition/details/details"
+    "pages/personal/myCompetition/competition",
+    "pages/competition/apply/apply",
+    "pages/recruit/details/recruits",
+    "pages/recruit/create/create",
+    "pages/recruit/recruitType/typeRecruit",
+    "pages/personal/index/index",
+    "custom-tab-bar/index",
+    "pages/competition/details/details",
+    "pages/personal/information/information",
+    "pages/personal/myRecruit/recruits",
+    "pages/extra/problem/problem",
+    "pages/personal/myCompetition/details/applyDetails"
   ],
   "tabBar": {
     "color": "#7A7E83",
@@ -36,7 +42,6 @@
     ]
   },
   "window": {
-    "enablePullDownRefresh": true,
     "onReachBottomDistance": 50,
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#54a0e7",

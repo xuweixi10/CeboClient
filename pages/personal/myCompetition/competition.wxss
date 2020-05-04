@@ -1,0 +1,50 @@
+/* pages/personal/myCompetition/competition.wxss */
+.main{
+  position: relative;
+  top: 20rpx;
+}
+.title{
+  position: relative;
+  font-size: 44rpx;
+  font-weight: 700;
+  left: 20rpx;
+  height: 80rpx;
+}
+.competition{
+  position: relative;
+  width: 88%;
+  left: 6%;
+  height: 300rpx;
+  background-color: rgba(200, 208, 215, 0.9);
+  margin-bottom: 50rpx;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 15rpx rgb(78, 74, 74);
+}
+.competition:active{
+  box-shadow: 5rpx 5rpx 5rpx rgb(78, 74, 74);
+}
+.competition .name{
+  position: relative;
+  height: 100rpx;
+  left: 20rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+}
+.competition .detalis{
+  position: relative;
+  height: 80rpx;
+  width: 80%;
+  left: 10%;
+  line-height: 80rpx;
+}
+.detalis .applyName{
+  position: relative;
+  width: 300rpx;
+  float: left;
+}
+.detalis .value{
+  position: relative;
+  width: 200rpx;
+  float: left;
+}

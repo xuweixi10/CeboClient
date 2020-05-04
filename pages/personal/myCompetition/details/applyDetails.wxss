@@ -1,0 +1,108 @@
+/* pages/personal/myCompetition/details/applyDetails.wxss */
+.main{
+  position: relative;
+  width: 100%;
+  top: 100rpx;
+}
+.team{
+  position: relative;
+  width: 80%;
+  left: 10%;
+  margin-bottom: 80rpx;
+}
+.title{
+  position: relative;
+  width: 100%;
+  height: 50;
+  border-bottom: 1px solid #000;
+  font-size: 45rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.competitionitem{
+  text-align: left;
+}
+.competitionitem .competitionName{
+  position: relative;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+  height: 100rpx;
+  border-bottom: 1px solid #000;
+}
+.competitionitem view{
+  padding: 10rpx;
+  position: relative;
+  line-height: 100rpx;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+}
+.competitionitem .picker{
+  position: relative;
+  background-color: #f8f8f8;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.competitionitem .radio{
+  position: relative;
+  margin-left: 10rpx;
+}
+.competitionitem .textarea{
+  position: relative;
+  text-align: left;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  height: 500rpx;
+  background-color: #f8f8f8;
+  border-radius: 16rpx;
+  width: 100%;
+}
+.item{
+  position: relative;
+  width: 600rpx;
+  height: 80rpx;
+  margin-bottom: 40rpx;
+}
+.item .name{
+  position: relative;
+  line-height: 80rpx;
+  float: left;
+  width: 160rpx;
+  left: 0rpx;
+  text-align: center;
+  margin-right: 40rpx;
+  border-bottom: 1px solid #000;
+}
+.item .input{
+  position: relative;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  float: left;
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 380rpx;
+}
+.team .personinfor{
+  position: relative;
+  width: 94%;
+  left: 3%;
+  padding-top: 10rpx;
+  padding-bottom: 40rpx;
+}
+.cap{
+  position: relative;
+  width: 80%;
+  left: 10%;
+  margin-bottom: 80rpx;
+}
+.per{
+  position: relative;
+  width: 80%;
+  left: 10%;
+  margin-bottom: 80rpx;
+}
+.per .persion{
+  position: relative;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30rpx;
+}

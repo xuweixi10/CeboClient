@@ -26,7 +26,7 @@
         <view class="toparea">
           <text class="name">队员</text>
           <button class="addInfor" bindtap="addPerson">+</button>
-          <button class="recruit" bindtap="hiddenInfor">没有队友，立马招募</button>
+          <button class="recruit" bindtap="torecruit">没有队友，立马招募</button>
         </view>
         <person class="model personForm" personHeight="{{personHeight}}" index="0" formData="{{competitionData.perApplyType}}"></person>
         <view wx:for="{{personInfor}}" wx:key="item">
@@ -36,7 +36,45 @@
       </view>
     </view>
     <view class="competition" animation="{{bottomAnimation}}" style="display:{{competitionStatus}}">
-        <view class="competitionitem">
+      <view wx:for="{{comAppyData}}" wx:key="inputName">
+        <view wx:if="{{item.type==0}}">
+          <view class="competitionitem">
+            <text class="competitionName">{{item.name}}</text>
+            <input class="competitionNameNormal" name="{{item.inputName}}" type="text"></input>
+          </view>
+        </view>
+        <!--radio类型-->
+        <view wx:elif="{{item.type==1}}">
+          <view class="competitionitem">
+            <text class="competitionName">{{item.name}}</text>
+            <radio-group class="radio-group" bindchange="radioChange" name="{{item.inputName}}">
+              <radio class="radio" wx:for-items="{{item.radioName}}" wx:key="item" value="{{item}}">
+                <text>{{item}}</text>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+        <!--picker类型-->
+        <view wx:elif="{{item.type==2}}">
+          <view class="competitionitem">
+            <text class="competitionName">{{item.name}}</text>
+            <picker bindchange="pickerChange" range="{{item.value}}" class="picker" 
+                    name="{{item.inputName}}" data-name="{{item.inputName}}" value="{{pickerIndex[item.inputName]}}">
+              <view class="picker">
+              {{item.value[pickerIndex[item.inputName]]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <!--textarea类型-->
+        <view wx:elif="{{item.type==3}}">
+          <view class="competitionitem">
+            <text class="competitionName">{{item.name}}</text>
+            <textarea class="textarea" name="{{item.inputName}}"></textarea>
+          </view>
+        </view>
+      </view>
+        <!-- <view class="competitionitem">
           <text class="competitionName">参赛项目名称</text>
           <input class="competitionNameNormal" name="test" type="text" bindinput="detail1ValueChange"></input>
         </view>
@@ -59,9 +97,9 @@
         <view class="competitionitem">
           <text class="competitionName">参赛项目简介</text>
           <textarea class="textarea" name="testTextArea"></textarea>
-        </view>
+        </view> -->
         <button class="submit" type="primary" formType="submit">提交</button>
-        <text class="problem">遇到问题?</text>
+        <text class="problem" bindtap="toproblem">遇到问题?</text>
     </view>
   </form>
 

@@ -1,0 +1,20 @@
+<!--pages/extra/problem/problem.wxml-->
+<view class="contain">
+  <view class="always">常见问题</view>
+  <view class="problem">
+    <view class="title">1.报名显示报名失败</view>
+    <view class="answer">答：可能服务器忙或者您的网路不好</view>
+  </view>
+  <view class="problem">
+    <view class="title">2.发布招募失败</view>
+    <view class="answer">答：请检查是否已经超过最大发布招募数量,及时删除不需要的招募</view>
+  </view>
+  <view class="problem">
+    <view class="title">3.个人信息修改不了</view>
+    <view class="answer">答：可能存在该学号已被占用,如需修改见第四条</view>
+  </view>
+  <view class="problem">
+    <view class="title">4.其他问题</view>
+    <view class="answer">答：任何问题可联系在线技术人员解决。QQ:1719439540</view>
+  </view>
+</view>

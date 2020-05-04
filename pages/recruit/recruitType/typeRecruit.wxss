@@ -1,0 +1,61 @@
+/* pages/recruit/recruitType/typeRecruit.wxss */
+.competitions{
+  position: relative;
+  width: 90%;
+  left: 5%;
+}
+.competitions .item{
+  position: relative;
+  height: 140rpx;
+  background-color: silver;
+  border-radius: 8rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  line-height: 140rpx;
+  padding-left: 20rpx;
+}
+.recruits{
+  position: relative;
+  top: 80rpx;
+  width: 96%;
+  left: 2%;
+}
+.recruits .recruit{
+  position: relative;
+  height: 120rpx;
+  width: 90%;
+  left: 5%;
+  background-color: rgba(64, 112, 87, 0.1) ;
+  margin-bottom: 10rpx;
+  border-radius: 6rpx;
+  box-shadow: 5rpx 5rpx 10rpx rgba(0, 0, 0, 0.5);
+}
+.recruit .competitionName{
+  position: relative;
+  height: 80rpx;
+  font-size: 38rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+}
+.recruit .wanted{
+  position: relative;
+  height: 40rpx;
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  line-height: 40rpx;
+  padding-left: 30rpx;
+}
+.bottom{
+  position: relative;
+  height: 100rpx;
+  text-align: center;
+  width: 100%;
+  font-size: 20rpx;
+  opacity: 0.7;
+  line-height: 100rpx;
+}

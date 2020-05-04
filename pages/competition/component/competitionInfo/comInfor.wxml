@@ -3,7 +3,7 @@
   <view class="competitionInformation" bindtap="toDetails">
     <view class="name">{{competitionName}}</view>
     <view class="extra">
-      <view class="time">报名时间：{{competitionApplyBeginTime}}~{{competitionApplyEndTime}}</view>
+      <view class="time">报名时间：{{begin}}~{{end}}</view>
       <view class="object">面向对象：{{competitionObject}}</view>
     </view>
   </view>

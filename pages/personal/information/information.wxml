@@ -1,0 +1,29 @@
+<!--pages/personal/information/information.wxml-->
+<view class="main">
+<form bindsubmit="formSubmit">
+  <view class="school item">
+    <view class="name">学校</view>
+    <view class="formarea">
+      <picker bindchange="bindSchoolChange" value="{{schoolIndex}}" range="{{schoolArray}}" disabled="{{disable}}" name="school">
+        <view class="picker">
+          {{schoolArray[schoolIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="studentId item">
+    <view class="name">学号</view>
+    <view class="formarea">
+      <input disabled="{{disable}}" name="studentId" value="{{studentId}}"></input>
+    </view>
+  </view>
+  <view class="certs item">
+    <view class="name">密码</view>
+    <view class="formarea">
+      <input disabled="{{disable}}" name="pass"></input>
+    </view>
+  </view>
+  <button type="{{status}}" form-type="{{formStatus}}" loading="{{sending}}" class="changeInfor" bindtap="changeInformation">
+  {{buttonText}}</button>
+</form>
+</view>

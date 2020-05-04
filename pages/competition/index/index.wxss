@@ -14,6 +14,7 @@ page{
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 107rpx;
   background-color: rgba(239, 228, 237, 0.5);
   height: auto;
   opacity: 0.8;
@@ -80,6 +81,20 @@ page{
 .loadInfor{
   position: relative;
   text-align: center;
-  line-height: 100rpx;
+  top: -10rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+}
+.loadInfor image{
+  position: relative;
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
   height: 100rpx;
+  width: 100rpx;
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
